@@ -30,17 +30,18 @@ public class ButtonController : MonoBehaviour
 
     public void InitializeButton(float start, float startX, float startY, bool isDrag, float endX, float endY)
     {
-        this.transform.SetAsFirstSibling();
-        this.gameObject.transform.position = new Vector3(startX, startY);
+        //UnityEngine.Debug.Log("x: " + startX + "y: " + startY);
+        //this.transform.SetAsFirstSibling();
+        this.startButton.transform.localPosition = new Vector3(startX, startY, 2500);
 
-        this.startButton.transform.SetParent(this.gameObject.transform, false);
+       // this.startButton.transform.SetParent(this.gameObject.transform, false);
 
-        this.isDrag = isDrag;
+        //this.isDrag = isDrag;
 
-        if(this.isDrag)
-        {
-            SetupDragRegion(startX, endX, startY, endY);
-        }
+        //if(this.isDrag)
+        //{
+        //    SetupDragRegion(startX, endX, startY, endY);
+        //}
 
         this.startButton.gameObject.SetActive(true);
 
@@ -49,6 +50,8 @@ public class ButtonController : MonoBehaviour
         this.buttonTimer.Start();
 
         StartCoroutine(this.ScaleIndicator());
+        StartCoroutine(this.ZoomButton());
+
     }
 
     public void SetupDragRegion(float x1, float x2, float y1, float y2)
@@ -75,11 +78,11 @@ public class ButtonController : MonoBehaviour
     {
         if(this.startButton != null && this.startButton.gameObject.activeSelf && this.buttonTimer.ElapsedMilliseconds > this.duration)
         {
-            this.buttonTimer.Stop();
-            this.buttonTimer.Reset();
-            OnClicked(this);
+            //this.buttonTimer.Stop();
+            //this.buttonTimer.Reset();
+            //OnClicked(this);
 
-            StartCoroutine(this.FadeAway());
+            //StartCoroutine(this.FadeAway());
         }
         else if (Input.GetMouseButton(0) && this.beginDragEvent && this.indicatorCollision.isHit)
         {
@@ -154,6 +157,21 @@ public class ButtonController : MonoBehaviour
             while(this.buttonTimer.ElapsedMilliseconds < (this.duration/2f))
             {
                 this.indicator.transform.localScale = Vector3.Lerp(originalScale, destinationScale, this.buttonTimer.ElapsedMilliseconds / (this.duration / 2f));
+                yield return null;
+            }
+        }
+    }
+
+    private IEnumerator ZoomButton()
+    {
+        Vector3 originalPos = this.startButton.transform.localPosition;
+        Vector3 desitination = new Vector3(originalPos.x, originalPos.y, -2000);
+
+        if (this.buttonTimer.IsRunning)
+        {
+            while (this.buttonTimer.ElapsedMilliseconds < (this.duration))
+            {
+                this.startButton.transform.localPosition = Vector3.Lerp(originalPos, desitination, this.buttonTimer.ElapsedMilliseconds / (this.duration));
                 yield return null;
             }
         }

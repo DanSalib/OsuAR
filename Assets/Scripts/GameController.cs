@@ -25,7 +25,6 @@ public class GameController : MonoBehaviour
 	void Start () {
         if(!this.LoadGameData())
         {
-            UnityEngine.Debug.Log("No Game Data Found");
             return;
         }
 

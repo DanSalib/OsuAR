@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsuAR", "OsuAR.csproj", "{FDDBD9B5-0F30-FDB3-9E82-7090570EBC9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsuAR.Editor", "OsuAR.Editor.csproj", "{ED13292C-380B-07C6-E0CC-848B9ABE712D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDDBD9B5-0F30-FDB3-9E82-7090570EBC9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDBD9B5-0F30-FDB3-9E82-7090570EBC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDBD9B5-0F30-FDB3-9E82-7090570EBC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDBD9B5-0F30-FDB3-9E82-7090570EBC9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED13292C-380B-07C6-E0CC-848B9ABE712D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED13292C-380B-07C6-E0CC-848B9ABE712D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED13292C-380B-07C6-E0CC-848B9ABE712D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED13292C-380B-07C6-E0CC-848B9ABE712D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

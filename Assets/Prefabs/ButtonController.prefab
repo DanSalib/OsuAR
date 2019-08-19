@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 114644238012218544}
   - component: {fileID: 114079863993891588}
   - component: {fileID: 114196644576380948}
+  - component: {fileID: 65188148985322342}
   m_Layer: 5
   m_Name: startButton
   m_TagString: Untagged
@@ -92,7 +93,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224435732506798274}
-  - component: {fileID: 114508757838855886}
+  - component: {fileID: 114983003984482124}
   m_Layer: 5
   m_Name: ButtonController
   m_TagString: ButtonController
@@ -170,6 +171,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 90.41
+--- !u!65 &65188148985322342
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436628398658944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 107.75, y: 108.2, z: 436.36}
+  m_Center: {x: 0, y: 0, z: 197.38}
 --- !u!114 &114001312915978916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,7 +202,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4f5d5101abc442a4a9d79e804bd80531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 228548f88d900794bbc52ce0fc3ebd3a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -277,7 +290,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 114983003984482124}
           m_MethodName: ButtonClicked
           m_Mode: 1
           m_Arguments:
@@ -426,7 +439,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 114983003984482124}
           m_MethodName: ButtonClicked
           m_Mode: 1
           m_Arguments:
@@ -454,26 +467,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0.6102941, g: 0.6102941, b: 0.6102941, a: 0.384}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!114 &114508757838855886
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1701095029750306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa5d38a97b3f89d448fd82a9a21a150c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startButton: {fileID: 114079863993891588}
-  endButton: {fileID: 114404588280167442}
-  dragRegion: {fileID: 114652856972574704}
-  startButtonText: {fileID: 114864073312972312}
-  endButtonText: {fileID: 114257962953217384}
-  indicator: {fileID: 114525057360478298}
-  indicatorCollision: {fileID: 114082012099216534}
-  duration: 0
-  buttonScore: 0
 --- !u!114 &114525057360478298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -534,7 +527,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4f5d5101abc442a4a9d79e804bd80531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 228548f88d900794bbc52ce0fc3ebd3a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -561,7 +554,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 55212c08796d4c14380a6f612e10546b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36d546d68c105a141a5dc96d8dd4c72e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -585,7 +578,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 114983003984482124}
           m_MethodName: ButtonClicked
           m_Mode: 1
           m_Arguments:
@@ -659,6 +652,26 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114983003984482124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1701095029750306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e16a54a1a3ae75246b162aa12289d8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 114079863993891588}
+  endButton: {fileID: 114404588280167442}
+  dragRegion: {fileID: 114652856972574704}
+  startButtonText: {fileID: 114864073312972312}
+  endButtonText: {fileID: 114257962953217384}
+  indicator: {fileID: 114525057360478298}
+  indicatorCollision: {fileID: 114082012099216534}
+  duration: 0
+  buttonScore: 0
 --- !u!222 &222013876911246430
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -737,7 +750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -434.47, y: -221.41}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &224588698178993512

@@ -61,7 +61,7 @@ public class MappingModeController : MonoBehaviour
             Vector3 diffPos = Input.mousePosition - this.lastPosition;
 
             this.curButton.dragRegion.gameObject.transform.localScale += new Vector3(((Mathf.Abs(diffPos.x) + Mathf.Abs(diffPos.y)) * 1 / 60f * scaleSensitivity), 0f, 0f);
-            this.curButton.dragRegion.gameObject.transform.position += ((diffPos) * scaleSensitivity * 0.75f);
+            this.curButton.dragRegion.gameObject.transform.localPosition += ((diffPos) * scaleSensitivity * 0.75f);
 
             this.curButton.InitializeLastButton(Input.mousePosition.x, Input.mousePosition.y);
             this.lastPosition = Input.mousePosition;
