@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
+#if UNITY_EDITOR 
 using UnityEditor;
+#endif
 
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MappingModeController : MonoBehaviour
 {
-
+#if UNITY_EDITOR
     public Text positionLabel;
     public Text timerLabel;
     public Text playLabel;
@@ -198,12 +200,13 @@ public class MappingModeController : MonoBehaviour
 
     private void SetupAudioClip()
     {
-        string filePath = EditorUtility.OpenFilePanel("Select music file", Application.dataPath + "/Resources", "mp3");
-        string[] path = filePath.Split('/');
-        string clipName = path[path.Length - 1].Split('.')[0];
+        //string filePath = EditorUtility.OpenFilePanel("Select music file", Application.dataPath + "/Resources", "mp3");
+        //string[] path = filePath.Split('/');
+        //string clipName = path[path.Length - 1].Split('.')[0];
  
-        AudioClip clip = Resources.Load(clipName) as AudioClip;
+        //AudioClip clip = Resources.Load(clipName) as AudioClip;
 
-        this.audio.clip = clip;
+        //this.audio.clip = clip;
     }
+#endif
 }

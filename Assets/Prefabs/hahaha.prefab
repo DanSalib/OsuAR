@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 82529313631372970}
-  clipName: candoit
+  clipName: beetoven
 --- !u!114 &114887869495966874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,7 +275,7 @@ MonoBehaviour:
   buttonPrefab: {fileID: 1701095029750306, guid: 47f1496fd930d0046a4931b92ac4e442,
     type: 2}
   scoreLabel: {fileID: 114332873336534036}
-  gameDataFileName: test4.json
+  gameDataFileName: beetoven.json
   gameSpeed: 2000
 --- !u!222 &222884073656357660
 CanvasRenderer:

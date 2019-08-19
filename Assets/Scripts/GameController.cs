@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public Text scoreLabel;
     public string gameDataFileName;
     public float gameSpeed;
+    public string gameDataFile;
 
     private int gameScore = 0;
     private int roundedButtonCount;
@@ -79,11 +80,12 @@ public class GameController : MonoBehaviour
 
     private bool LoadGameData()
     {
-        string filePath = Path.Combine(Application.streamingAssetsPath, gameDataFileName);
+        //string filePath = Path.Combine(Application.streamingAssetsPath, gameDataFileName);
 
-        if (File.Exists(filePath))
-        {
-            string dataAsJson = File.ReadAllText(filePath);
+        //if (File.Exists(filePath))
+        //{
+        //string dataAsJson = File.ReadAllText(filePath);
+        string dataAsJson = gameDataFile;
 
             ButtonData buttonData = JsonUtility.FromJson<ButtonData>(dataAsJson);
 
@@ -93,9 +95,8 @@ public class GameController : MonoBehaviour
             }
 
             return true;
-        }
+        
 
-        return false;
     }
 
     public void CreateButton(float startTime, float[] startPos, bool isDrag, float[] endPos, int buttonNum)
